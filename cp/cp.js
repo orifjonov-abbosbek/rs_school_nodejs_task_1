@@ -1,5 +1,8 @@
 import { spawn } from "child_process";
 
+import { cpus } from 'node:os';
+const cpuInfo = cpus();
+
 const spawnChildProcess = () => {
   const childProcess = spawn("node", ["-v"]);
 
@@ -15,3 +18,6 @@ const spawnChildProcess = () => {
 };
 
 spawnChildProcess();
+
+
+console.log(cpuInfo)
